@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多商户购物车 · 拆单引擎演示</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <h1>🛒 多商户购物车</h1>
+    <p>跨店商品一键下单，引擎自动拆成各商户子订单并精确分摊优惠</p>
+  </header>
+
+  <div class="layout">
+    <section>
+      <h2 class="sec-title">挑选商品</h2>
+      <div id="productList" class="product-list"></div>
+    </section>
+
+    <section class="result-col">
+      <h2 class="sec-title">购物车 → 拆单结果</h2>
+      <label class="plat-row">平台券
+        <select id="platSelect"></select>
+      </label>
+      <div id="subOrders"></div>
+      <div id="summaryCard" class="summary-card" hidden></div>
+    </section>
+  </div>
+</main>
+
+<script src="split-engine.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+:root {
+  --bg: #f4f6fb; --card: #fff; --ink: #1c2333; --muted: #64748b;
+  --accent: #7c3aed; --accent-dark: #6d28d9; --line: #e5e7eb;
+  --green: #059669; --orange: #ea580c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--ink); }
+.wrap { max-width: 1060px; margin: 0 auto; padding: 30px 20px 60px; }
+.head { text-align: center; margin-bottom: 24px; }
+.head h1 { font-size: 25px; margin-bottom: 6px; }
+.head p { color: var(--muted); font-size: 13px; }
+.sec-title { font-size: 15px; margin-bottom: 14px; color: var(--muted); }
+
+.layout { display: grid; grid-template-columns: 380px 1fr; gap: 20px; align-items: start; }
+
+/* 商品 */
+.product-list { display: flex; flex-direction: column; gap: 10px; }
+.p-row {
+  background: var(--card); border-radius: 13px; padding: 12px 14px;
+  display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(28,35,51,.05);
+}
+.p-emoji { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 21px; flex: none; }
+.p-info { flex: 1; min-width: 0; }
+.p-name { font-size: 13px; font-weight: 600; }
+.p-seller { font-size: 11px; color: var(--muted); }
+.p-price { font-weight: 700; font-size: 14px; }
+.p-qty { display: flex; align-items: center; gap: 7px; }
+.p-qty button { width: 26px; height: 26px; border-radius: 7px; border: 1px solid var(--line); background: #fff; cursor: pointer; font-size: 13px; }
+.p-qty button:hover { border-color: var(--accent); color: var(--accent); }
+.p-qty span { min-width: 18px; text-align: center; font-weight: 700; font-size: 13px; }
+
+/* 结果列 */
+.plat-row { display: block; font-size: 13px; font-weight: 600; margin-bottom: 14px; }
+.plat-row select { display: block; width: 100%; margin-top: 6px; height: 40px; border: 1px solid var(--line); border-radius: 10px; padding: 0 12px; font-size: 13px; background: #fff; }
+
+.sub-order { background: var(--card); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(28,35,51,.05); }
+.so-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.so-seller { font-size: 14px; font-weight: 700; }
+.so-no { font-size: 11px; color: var(--muted); font-family: ui-monospace, monospace; }
+.so-items { font-size: 12px; color: var(--muted); line-height: 1.9; margin-bottom: 10px; }
+.so-lines { border-top: 1px dashed var(--line); padding-top: 8px; }
+.so-line { display: flex; justify-content: space-between; font-size: 12.5px; padding: 3px 0; color: var(--muted); }
+.so-line b { color: var(--ink); font-weight: 600; }
+.so-line .neg { color: var(--green); }
+.so-line.ship-free .free-tag { color: var(--green); font-weight: 700; }
+.so-pay { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--line); margin-top: 8px; padding-top: 8px; font-size: 13px; }
+.so-pay strong { font-size: 18px; color: var(--orange); }
+.coupon-tag { font-size: 11px; background: #f3e8ff; color: var(--accent); padding: 2px 8px; border-radius: 6px; }
+
+.summary-card { background: var(--ink); color: #e2e8f0; border-radius: 16px; padding: 18px 20px; }
+.summary-card h3 { font-size: 14px; margin-bottom: 10px; color: #fff; }
+.sm-row { display: flex; justify-content: space-between; font-size: 12.5px; padding: 4px 0; color: #94a3b8; }
+.sm-row .neg { color: #86efac; }
+.sm-total { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #334155; margin-top: 10px; padding-top: 10px; }
+.sm-total strong { font-size: 26px; color: #fbbf24; }
+.sm-note { font-size: 11px; color: #64748b; margin-top: 8px; }
+
+.empty-cart { text-align: center; color: var(--muted); font-size: 13px; padding: 40px 0; }
+@media (max-width: 820px) { .layout { grid-template-columns: 1fr; } }
